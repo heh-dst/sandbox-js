@@ -2,23 +2,23 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
   "name": "Python sandbox",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
   "customizations": {
     "vscode": {
       "extensions": [
         "aaron-bond.better-comments",
         "adpyke.codesnap",
         "christian-kohler.npm-intellisense",
-        "EditorConfig.EditorConfig",
         "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
         "esbenp.prettier-vscode",
         "GitHub.github-vscode-theme",
         "humao.rest-client",
         "mikestead.dotenv",
-        "ms-edgedevtools.vscode-edge-devtools",
         "ms-vsliveshare.vsliveshare",
         "Orta.vscode-jest",
         "redhat.vscode-yaml",
+        "ritwickdey.LiveServer",
         "visualstudioexptteam.vscodeintellicode",
         "visualstudioexptteam.intellicode-api-usage-examples",
         "vscode-icons-team.vscode-icons",
@@ -27,19 +27,29 @@
       "settings": {
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
-        "git.autofetch": true,
-        "python.analysis.autoImportCompletions": true,
-        "python.testing.autoTestDiscoverOnSaveEnabled": true,
-        "python.testing.pytestEnabled": false,
-        "python.testing.promptToConfigure": false,
-        "python.testing.unittestArgs": [
-          "-v",
-          "-s",
-          ".",
-          "-p",
-          "test*.py"
+        "editor.fontLigatures": false,
+        "editor.rulers": [
+          80,
+          120
         ],
-        "python.testing.unittestEnabled": true,
+        "files.exclude": {
+          "**/.*": true
+        },
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "git.enableSmartCommit": true,
+        "html.format.indentInnerHtml": true,
+        "redhat.telemetry.enabled": false,
+        "rest-client.enableTelemetry": false,
+        "telemetry.telemetryLevel": "off",
+        "window.autoDetectColorScheme": true,
+        "workbench.editor.closeOnFileDelete": true,
+        "workbench.iconTheme": "vscode-icons",
+        "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+        "workbench.preferredLightColorTheme": "GitHub Light Default",
+        "workbench.startupEditor": "none",
+        "workbench.tips.enabled": false,
+        "workbench.welcomePage.walkthroughs.openOnInstall": false,
         "[html]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
@@ -55,14 +65,15 @@
         "[markdown]": {
           "editor.wordWrap": "on"
         },
-        "[python]": {
-          "editor.defaultFormatter": "ms-python.black-formatter",
-          "editor.formatOnSave": true
-        },
         "[typescript]": {
           "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
       }
     }
+  },
+  "remoteEnv": {
+    "LANG": "en_US.UTF-8",
+    "LC_ALL": "C",
+    "TZ": "Europe/Brussels"
   }
 }
